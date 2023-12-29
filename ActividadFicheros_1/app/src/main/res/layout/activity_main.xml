@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:gravity="end">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contenido a escribir:"
+        android:id="@+id/etPresentacion"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etContenido"
+        android:layout_below="@id/etPresentacion"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtEscribirFichero"
+        android:text="Añadir fich. int."
+        android:layout_below="@id/etContenido"
+        android:onClick="escribirFichero"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtLeerFichero"
+        android:text="Leer fich. int."
+        android:layout_below="@+id/etContenido"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="leerFichero"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtLeerRecurso"
+        android:text="@string/btn_r_Recurso"
+        android:layout_below="@+id/BtEscribirFichero"
+        android:layout_centerHorizontal="true"
+        android:onClick="leerRecurso"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/BtLeerRecurso"
+        android:id="@+id/lLMemoriaSD">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/BtEscribirMemoriaSD"
+            android:text="Añadir fich. ext."
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/BtLeerMemoriaSD"
+            android:text="Leer fich ext."
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lLMemoriaSD"
+        android:id="@+id/lLBorrarMemoria">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/BtBorrarMemoriaSD"
+            android:text="Borrar fich. ext"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/BtBorrarMemoria"
+            android:text="Borrar fich. int."
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/lLBorrarMemoria">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/LblCbecera"
+            android:text="@string/lbl_cabecera"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/LblContenidoFichero"
+            android:background="@drawable/rounded_corner"
+            android:textSize="16dp"/>
+    </LinearLayout>
+</RelativeLayout>
